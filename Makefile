@@ -1,5 +1,5 @@
 CC      = cc
-CFLAGS  = -Wall -Werror -Wextra -g
+CFLAGS  = -g #-Wall -Werror -Wextra
 NAME    = cub3D
 
 LIBFT   = lib/libft/libft.a

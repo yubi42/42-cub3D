@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cube.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jborner <jborner@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yubi42 <yubi42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 12:12:36 by yubi42            #+#    #+#             */
-/*   Updated: 2024/06/03 15:12:44 by jborner          ###   ########.fr       */
+/*   Updated: 2024/10/06 14:59:38 by yubi42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,16 +69,16 @@ typedef struct s_read
 
 typedef struct s_image
 {
-	void	*img_ptr;
-	char	*addr;
-	int		bpp;
-	int		endian;
-	int		bytes_per_line;
-	int		width;
-	int		height;
-	int		x;
-	int		y;
-	int		z;
+	void			*img_ptr;
+	char			*addr;
+	int				bpp;
+	int				endian;
+	int				bytes_per_line;
+	int				width;
+	int				height;
+	int				x;
+	int				y;
+	int				z;
 }					t_image;
 
 typedef struct s_minimap
@@ -97,53 +97,53 @@ typedef struct s_minimap
 
 typedef struct s_texture
 {
-	t_minimap	*minimap;
-	t_image		*base_img;
-	t_image		*base_img2;
-	t_image		*base_img2_resize;
-	t_image		*backmirror;
-	t_image		*backmirror2;
-	t_image		*carframe;
-	t_image		*carframe2;
-	t_image		*steeringwheel;
-	t_image		*steeringwheel2;
-	t_image		*alpha;
-	t_image		*alpha2;
-	t_image		*num0;
-	t_image		*num1;
-	t_image		*num2;
-	t_image		*num3;
-	t_image		*num4;
-	t_image		*num5;
-	t_image		*num6;
-	t_image		*num7;
-	t_image		*num8;
-	t_image		*num9;
-	t_image		*slash;
-	t_image		*kmh;
-	t_image		*game_over;
-	t_image		*your_score;
-	t_image		*high_score;
-	t_image		*img1;
-	t_image		*img2;
-	t_image		*black;
-	t_image		*transparent;
-	t_image		*goal;
-	t_image		*no;
-	t_image		*so;
-	t_image		*ea;
-	t_image		*we;
-	t_image		*sprite1;
-	char		*img_map_ground;
-	char		*map_ground;
-	char		*no_path;
-	char		*so_path;
-	char		*we_path;
-	char		*ea_path;
-	int			f[3];
-	int			c[3];
-	char		*map_str;
-}	t_texture;
+	t_minimap		*minimap;
+	t_image			*base_img;
+	t_image			*base_img2;
+	t_image			*base_img2_resize;
+	t_image			*backmirror;
+	t_image			*backmirror2;
+	t_image			*carframe;
+	t_image			*carframe2;
+	t_image			*steeringwheel;
+	t_image			*steeringwheel2;
+	t_image			*alpha;
+	t_image			*alpha2;
+	t_image			*num0;
+	t_image			*num1;
+	t_image			*num2;
+	t_image			*num3;
+	t_image			*num4;
+	t_image			*num5;
+	t_image			*num6;
+	t_image			*num7;
+	t_image			*num8;
+	t_image			*num9;
+	t_image			*slash;
+	t_image			*kmh;
+	t_image			*game_over;
+	t_image			*your_score;
+	t_image			*high_score;
+	t_image			*img1;
+	t_image			*img2;
+	t_image			*black;
+	t_image			*transparent;
+	t_image			*goal;
+	t_image			*no;
+	t_image			*so;
+	t_image			*ea;
+	t_image			*we;
+	t_image			*sprite1;
+	char			*img_map_ground;
+	char			*map_ground;
+	char			*no_path;
+	char			*so_path;
+	char			*we_path;
+	char			*ea_path;
+	int				f[3];
+	int				c[3];
+	char			*map_str;
+}					t_texture;
 
 typedef struct s_texture_ok
 {
@@ -153,7 +153,7 @@ typedef struct s_texture_ok
 	int				ea;
 	int				f;
 	int				c;
-}	t_texture_ok;
+}					t_texture_ok;
 
 typedef struct s_map
 {
@@ -163,7 +163,7 @@ typedef struct s_map
 	int				i;
 	int				j;
 	char			player;
-}	t_map;
+}					t_map;
 
 typedef struct s_player
 {
@@ -180,7 +180,7 @@ typedef struct s_player
 	int				corners[4][2];
 	int				dead;
 	int				wall_hit;
-}	t_player;
+}					t_player;
 
 typedef struct s_ray
 {
@@ -210,7 +210,7 @@ typedef struct s_ray
 	double			dis_row;
 	double			dis_col;
 	int				first_col;
-}	t_ray;
+}					t_ray;
 
 typedef struct s_ray_back
 {
@@ -240,47 +240,47 @@ typedef struct s_ray_back
 	double			dis_row;
 	double			dis_col;
 	int				first_col;
-}	t_ray_back;
+}					t_ray_back;
 
 typedef struct s_sound
 {
-	ma_result	result;
-	ma_engine	engine;
-	ma_sound	motor;
-	ma_sound	crash;
-	ma_sound	siren;
-	ma_sound	soundtrack;
-}	t_sound;
+	ma_result		result;
+	ma_engine		engine;
+	ma_sound		motor;
+	ma_sound		crash;
+	ma_sound		siren;
+	ma_sound		soundtrack;
+}					t_sound;
 
 typedef struct s_line
 {
-	long long	xy0[2];
-	long long	xy1[2];
-	long long	m;
-	long long	x;
-	long long	y;
-	long long	b;
-}	t_line;
+	long long		xy0[2];
+	long long		xy1[2];
+	long long		m;
+	long long		x;
+	long long		y;
+	long long		b;
+}					t_line;
 
 typedef struct s_sprite
 {
-	int	x;
-	int	y;
+	int				x;
+	int				y;
 
-}	t_sprite;
+}					t_sprite;
 
 typedef struct s_rotate
 {
-	t_image	**img;
-	t_image	*img_rot;
-	double	radians;
-	int		y;
-	int		x;
-	int		new_x;
-	int		new_y;
-	int		rotated_x;
-	int		rotated_y;	
-}	t_rotate;
+	t_image			**img;
+	t_image			*img_rot;
+	double			radians;
+	int				y;
+	int				x;
+	int				new_x;
+	int				new_y;
+	int				rotated_x;
+	int				rotated_y;
+}					t_rotate;
 
 typedef struct s_data
 {
@@ -305,7 +305,7 @@ typedef struct s_data
 	t_map			*map;
 	t_player		*player;
 	t_ray			ray;
-	t_ray_back			ray_back;
+	t_ray_back		ray_back;
 	t_sound			sound;
 	t_line			line[3];
 	bool			restart;
@@ -313,7 +313,7 @@ typedef struct s_data
 	long long		score[10];
 	char			name[20];
 	char			names[10][20];
-}	t_data;
+}					t_data;
 
 // ================= CLOSE ==================
 // err.c
@@ -373,17 +373,17 @@ int					render(t_data *data);
 void				run_game(t_data *data);
 
 // put_score_utils_1.c
-void				put_single_num(t_data *data, unsigned int num, \
-						int w, int h);
+void				put_single_num(t_data *data, unsigned int num, int w,
+						int h);
 void				put_num(t_data *data, unsigned int num, int *w_h, int pos);
-void				put_num_to_baseimg(t_data *data, unsigned int num, \
-						int w, int h);
+void				put_num_to_baseimg(t_data *data, unsigned int num, int w,
+						int h);
 void				put_kmh(t_data *data, unsigned int num, int w, int h);
 long long			get_elapsed_time_ms(struct timeval *start_time);
 
 // put_score_utils_2.c
 void				put_laptime_ms(t_data *data, int w, int h, long long score);
-void				put_laptime_ms_rest(t_data *data, int w, int h, \
+void				put_laptime_ms_rest(t_data *data, int w, int h,
 						long long score);
 void				put_laptime_s(t_data *data, int w, int h, long long score);
 void				put_laptime(t_data *data, int w, int h, int highscore);
@@ -423,7 +423,8 @@ void				cast_rays(t_data *data, double angle, int deg, int amount);
 // init_ray_checker_back.c
 void				init_ray_steps_back(t_ray_back *ray);
 void				init_next_steps_back(t_ray_back *ray);
-void				init_check_ray_back(t_ray_back *ray, double angle, int x, int y);
+void				init_check_ray_back(t_ray_back *ray, double angle, int x,
+						int y);
 
 // init_ray_checker.c
 void				init_ray_steps(t_ray *ray);
@@ -438,7 +439,7 @@ void				adjust_x_y(t_data *data, double *x, double *y);
 // wall_detection.c
 int					wall_found(t_data *data, double cur_x, double cur_y);
 
-//wall_detection_back.c
+// wall_detection_back.c
 int					wall_found_back(t_data *data, double cur_x, double cur_y);
 
 // ============== RENDER UTILS ==============
@@ -458,12 +459,9 @@ size_t				delay_ms(void);
 // render_utils.c
 void				create_frame(t_image *img, int size, int color);
 unsigned long		rgb_to_hex(int rgb[3]);
-void				render_default_minimap(t_data *data, \
-						t_minimap *minimap);
-void				render_minimap(t_data *data, \
-						t_minimap *minimap);
-void				render_background(t_data *data, \
-						t_image *bg);
+void				render_default_minimap(t_data *data, t_minimap *minimap);
+void				render_minimap(t_data *data, t_minimap *minimap);
+void				render_background(t_data *data, t_image *bg);
 
 // resize_img.c
 void				scale_img(t_image **old, t_image **new, int w, int h);
@@ -476,8 +474,8 @@ double				calc_old_y(t_data *data, t_image **old, int x, int y);
 void				rotate_player_img(t_data *data, t_image **old,
 						t_image **new);
 void				rotate_wheel(t_rotate *rot);
-void				rotate_stuff(t_data *data, t_image **img, \
-						double angle, int opt);
+void				rotate_stuff(t_data *data, t_image **img, double angle,
+						int opt);
 
 // ================= SETUP ==================
 // file_check.c

@@ -6,17 +6,17 @@
 /*   By: yubi42 <yubi42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:32:35 by jborner           #+#    #+#             */
-/*   Updated: 2024/02/26 15:05:27 by yubi42           ###   ########.fr       */
+/*   Updated: 2024/10/06 14:55:34 by yubi42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
-# include <unistd.h>
-# include <stdlib.h>
 # include <stdarg.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 // first part | libc functions
 
@@ -48,7 +48,7 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
 
-//second part | non libc functions
+// second part | non libc functions
 
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
@@ -84,33 +84,31 @@ t_list				*ft_lstnew(void *content);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
-
 // own functions
 
-void	*ft_realloc(void *str, size_t size);
-char	*ft_skip_ws(char *str);
-void	ft_free_split(char **split);
-int		ft_split_count(char **s);
+void				*ft_realloc(void *str, size_t size);
+char				*ft_skip_ws(char *str);
+void				ft_free_split(char **split);
+int					ft_split_count(char **s);
 
 // print_f
 
-int		ft_printf(const char *str, ...);
-void	check_type(char c, va_list list, int *count);
-void	ft_putchar(char c, int *count);
-void	ft_puthex(unsigned long num, char c, int *count);
-void	ft_putnbr(long num, int *count);
-void	ft_putstr(char *s, int *count);
-void	ft_putpoint(unsigned long num, int *count);
+int					ft_printf(const char *str, ...);
+void				check_type(char c, va_list list, int *count);
+void				ft_putchar(char c, int *count);
+void				ft_puthex(unsigned long num, char c, int *count);
+void				ft_putnbr(long num, int *count);
+void				ft_putstr(char *s, int *count);
+void				ft_putpoint(unsigned long num, int *count);
 
-//print_f_err
+// print_f_err
 
-int		ft_printf_err(const char *str, ...);
-void	check_type_err(char c, va_list list, int *count);
-void	ft_putchar_err(char c, int *count);
-void	ft_puthex_err(unsigned long num, char c, int *count);
-void	ft_putnbr_err(long num, int *count);
-void	ft_putstr_err(char *s, int *count);
-void	ft_putpoint_err(unsigned long num, int *count);
-
+int					ft_printf_err(const char *str, ...);
+void				check_type_err(char c, va_list list, int *count);
+void				ft_putchar_err(char c, int *count);
+void				ft_puthex_err(unsigned long num, char c, int *count);
+void				ft_putnbr_err(long num, int *count);
+void				ft_putstr_err(char *s, int *count);
+void				ft_putpoint_err(unsigned long num, int *count);
 
 #endif

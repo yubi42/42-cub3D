@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   put_str_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hstein <hstein@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yubi42 <yubi42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 22:15:38 by hstein            #+#    #+#             */
-/*   Updated: 2024/05/22 22:17:48 by hstein           ###   ########.fr       */
+/*   Updated: 2024/10/06 14:50:49 by yubi42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,10 @@
 void	put_letter(t_data *data, char letter, int w, int h)
 {
 	int	start;
-	int	end;
 	int	i;
 	int	j;
-	int	size;
 
 	start = (letter - 65) * data->texture->alpha->height;
-	end = (letter - 65) * data->texture->alpha->height + \
-		data->texture->alpha->height;
-	size = 2;
 	i = 0;
 	while (i < data->texture->alpha->height)
 	{
